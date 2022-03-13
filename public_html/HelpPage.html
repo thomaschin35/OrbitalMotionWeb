@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<!--
+12/04/21
+Thomas Chin
+This is the help page to help the user use the web app
+-->
+<html>
+    <head>
+        <title>Help</title>
+        <link rel="stylesheet" type="text/css" href="Layout.css"/>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="OrbitalJS.js"></script>
+    </head>
+    <body id="help">
+        <ul> <!-- Menu Bar-->
+            <li><a href="HomePage.html"> Home</a></li>
+            <li><a href="OrbitalFactorSelector.html">Orbital Factor Selector</a></li>
+            <li><a href="VelocityPage.html">Velocity Factors</a></li>
+            <li><a href="AccelerationPage.html">Acceleration Factors</a></li>
+            <li><a href="ForcePage.html">Force Factors</a></li>
+            <li><a href="HelpPage.html">Help</a></li>
+        </ul>
+        <div> <!-- Title -->
+            <h1> Help Page</h1>
+        </div>
+        <br>
+        <table><!-- Table for a page, picture, and help description-->
+            <tr>
+                <td><h2>Menu Bar</h2></td>
+                <td><img class= "helpImage" src="Images/MenuBar.png" alt="menu" title="menu"> </td>
+                <td> On the top of every page, there will be a menu bar to quickly navigate to the other
+                    pages of the website. Simply click which page you want to visit. </td>
+            </tr>
+            <tr>
+                <td><h2>Home Page</h2></td>
+                <td><img class= "helpImage" src="Images/HomePage.png" alt="home2" title="home2"> </td>
+                <td> This is the welcome page. To access any of the other pages, you can use
+                    the menu bar at the top of the page. If you press the green go button,
+                    you will go to the orbital factor selection page.</td>
+            </tr>
+            <tr>
+                <td><h2>Orbital Selector</h2></td>
+                <td><img class= "helpImage" src="Images/FactorSelector.png" alt="factor" title="factor"> </td>
+                <td> In this page, you can select which factor of orbital motion you want to solve for
+                    using the specific equations. Each button will take you to a different page to solve for each variable
+                    in the equation. (mass, distance, velocity, force, etc. )</td>
+            </tr>
+            <tr>
+                <td><h2>Velocity Page</h2></td>
+                <td><img class= "helpImage" src="Images/VelocityPage.png" alt="vel" title="velocity"> </td>
+                <td> Using the variables <b>(mass, distance, velocity)</b>, you can calculate each variable of the orbital velocity equation. Mass is the central body mass that an object is orbiting around(Kg).
+                    Distance is the distance from the earths core (meters). Make sure you enter in actual numbers and positive numbers for mass and distance.<img class= "smallImage" src="Images/Velocity.png" alt="velocity" title="velocity"></td>
+            </tr>
+            <tr>
+                <td><h2>Acceleration Page</h2></td>
+                <td><img class= "helpImage" src="Images/AccelerationPage.png" alt="accel" title="accel"> </td>
+                <td> With the variables <b>(mass, distance, acceleration)</b>, you can calculate each variable of the orbital acceleration equation. 
+                    Make sure you enter in actual numbers and positive numbers for mass and distance.<img class= "smallImage" src="Images/Acceleration.png" alt="Acceleration" title="Acceleration"></td>
+            </tr>
+            <tr>
+                <td><h2>Force Page</h2></td>
+                <td><img class= "helpImage" src="Images/ForcePage.png" alt="force" title="force"> </td>
+                <td> With the variables <b>(mass, distance, force, velocity)</b>, you can calculate each variable of the centripetal force equation. 
+                    Make sure you enter in actual numbers and positive numbers for mass and distance.<img class= "ForceImage" src="Images/Force.png" alt="Force" title="Force"></td>
+            </tr>
+        </table>
+    </body>
+</html>

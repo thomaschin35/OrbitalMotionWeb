@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<!--
+Thomas CHin
+11/08/21
+This page is for the user to select which variable they want to solve for, and also the formula
+that is being used. 
+-->
+<html>
+    <head>
+        <title>Factor Selector</title>
+        <link rel="stylesheet" type="text/css" href="Layout.css"/>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="OrbitalJS.js"></script>
+    </head>
+    <body>
+        <ul> <!-- Menu Bar-->
+            <li><a href="HomePage.html"> Home</a></li>
+            <li><a href="OrbitalFactorSelector.html">Orbital Factor Selector</a></li>
+            <li><a href="VelocityPage.html">Velocity Factors</a></li>
+            <li><a href="AccelerationPage.html">Acceleration Factors</a></li>
+            <li><a href="ForcePage.html">Force Factors</a></li>
+            <li><a href="HelpPage.html">Help</a></li>
+        </ul>
+        <div> <!-- Header  -->
+            <h1> Factor Selector </h1>
+        </div>
+        <div id="inputDiv"> <!-- Input layout at the top  -->
+            <br>
+            <form>
+                <h2>
+                    Select the variable you want to solve for <br><!-- comment -->
+                </h2>
+            </form>
+            <br>
+        </div>
+        <div id="velocityColumn">  <!-- Velocity -->
+            <form action="VelocityPage.html">
+                <input class="button" id = "velocityButton" type="submit" value="Velocity">
+            </form>
+            <br>
+            <img class= "smallImage" src="Images/Velocity.png" alt="velocity" title="velocity">
+        </div>
+        <div id="accelerationColumn"> <!-- Acceleration -->
+            <form action="AccelerationPage.html">
+                <input class="button" id = "accelerationButton" type="submit" value="Acceleration">
+            </form>
+            <br>
+            <img class="smallImage" src="Images/Acceleration.png" alt="acceleration" title="acceleration"> 
+        </div>
+        <div id="forceColumn"> <!-- Force -->
+            <form action="ForcePage.html">
+                <input class="button" id = "forceButton" type="submit" value="Force">
+            </form>
+            <br>
+            <img class="forceSmallImage" src="Images/Force.png" alt="Force" title="Force"> 
+        </div>
+    </body>
+</html>

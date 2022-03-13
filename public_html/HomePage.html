@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<!--
+Thomas Chin
+11/04/21
+This is the home page.
+-->
+<html>
+    <head>
+        <title>Orbital Motion</title>
+        <link rel="stylesheet" type="text/css" href="Layout.css"/>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <ul> <!-- Menu Bar-->
+            <li><a href="HomePage.html"> Home</a></li>
+            <li><a href="OrbitalFactorSelector.html">Orbital Factor Selector</a></li>
+            <li><a href="VelocityPage.html">Velocity Factors</a></li>
+            <li><a href="AccelerationPage.html">Acceleration Factors</a></li>
+            <li><a href="ForcePage.html">Force Factors</a></li>
+            <li><a href="HelpPage.html">Help</a></li>
+        </ul>
+
+        <div class="titleDiv"> <!-- Center section with main info -->
+            <h1> Orbital Motion </h1>
+        </div>
+        <div id="orbitDiv"><!-- earth -->
+            <img class= "earth" src="Images/Earth.png" alt="earth" title="earth">
+        </div>
+        <!-- Creating a space-->
+        <br> <br> <br> <br> <br> <br> <br> <br>
+        <div>
+            <h2>This website solves the factors of Orbital Motion: <br><i> Orbital Velocity, Centripetal Acceleration, and Centripetal Force </i>
+                <br> By: Thomas Chin </h2>
+            <!-- Go Button-->
+            <div id="goDiv">
+                <form action= "OrbitalFactorSelector.html">
+                    <input id = "goButton" type="submit"  value="Go">
+                </form>
+            </div>
+        </div>
+        <!-- Satellite image rotating around the earth-->
+        <div id="satelliteOrbit">
+            <img class= "satellite" src="Images/Satellite.png" alt="satellite" title="satellite">
+        </div>
+        <br> <br> <br>
+
+    </body>
+</html>

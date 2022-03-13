@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<!--
+11/21/21
+Thomas Chin
+This is the Velocity Page. The user can solve for each variable in the 
+orbital velocity equation.
+-->
+<html>
+    <head>
+        <title>Velocity Page</title>
+        <link rel="stylesheet" type="text/css" href="Layout.css"/>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="OrbitalJS.js"></script>
+    </head>
+    <body>
+        <ul> <!-- Menu Bar-->
+            <li><a href="HomePage.html"> Home</a></li>
+            <li><a href="OrbitalFactorSelector.html">Orbital Factor Selector</a></li>
+            <li><a href="VelocityPage.html">Velocity Factors</a></li>
+            <li><a href="AccelerationPage.html">Acceleration Factors</a></li>
+            <li><a href="ForcePage.html">Force Factors</a></li>
+            <li><a href="HelpPage.html">Help</a></li>
+        </ul>
+        <div> <!-- Title Div-->
+            <h1>
+                Solving for the Factors of Orbital Velocity
+            </h1>
+            <br>
+            <img class="velocityImage" src="Images/Velocity.png" alt="velocity" title="velocity">
+            <h2> Gravitational Constant (G) = 6.67 x 10<sup>-11</sup> </h2> <!-- Info on variables-->
+            <h2> Earths Radius = 6.37 x 10<sup>6</sup> meters </h2>
+            <h2> v = Orbital Velocity (m/s) </h2>
+            <h2> r = Distance from the earths core (meters)</h2>
+            <h2> M = The Central Body Mass that an object is orbiting around(Kg) </h2>
+        </div>
+        <br>
+        <hr>
+        <div id="velocityRow"> <!-- Row 1 - Velocity-->
+            <div class="titleColumn"> <!-- Velocity title-->
+                <h1> Velocity (v)</h1>
+            </div>
+            <div class="inputColumn"><!-- Inputs-->
+                <h2>
+                    Distance from the Earths Surface (KM): 
+                    <input id="distance1" type="text" name="Distance" maxlength="30"/>
+                </h2>
+                <h2>
+                    Mass (Kg): 
+                    <input id="mass1" type="text" name="mass" maxlength="30"/>
+                </h2>    
+            </div>
+            <div class="answerColumn"> <!-- Answer-->
+                <input class="calcButton" type="button" onClick="velVelocity(document.getElementById('distance1').value, document.getElementById('mass1').value)" value="Calculate">
+                <br> <br> 
+                <div id="velVelocityAnswer">
+                    <!-- Answer box-->
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div id="velDistanceRow"> <!-- Row 2 - distance-->
+            <div class="titleColumn"> <!-- Velocity title-->
+                <h1>Distance (r)</h1>
+            </div>
+            <div class="inputColumn"><!-- Inputs-->
+                <h2>
+                    Orbital Velocity (m/s): 
+                    <input id="velocity2" type="text" name="velocity" maxlength="30"/>
+                </h2>
+                <h2>
+                    Mass:
+                    <input id="mass2" type="text" name="mass" maxlength="30"/>
+                </h2>    
+            </div>
+            <div class="answerColumn"> <!-- Answer-->
+                <input class="calcButton" type="button" onClick="velDistance(document.getElementById('velocity2').value, document.getElementById('mass2').value)" value="Calculate">
+                <br> <br> 
+                <div id="velDistanceAnswer">
+                    <!-- Answer box-->
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div id="velMassRow"> <!-- Row 3 - mass-->
+            <div class="titleColumn"> <!-- Velocity title-->
+                <h1>Body Mass (M)</h1>
+            </div>
+            <div class="inputColumn"><!-- Inputs-->
+                <h2>
+                    Orbital Velocity (m/s): 
+                    <input id="velocity3" type="text" name="velocity" maxlength="30"/>
+                </h2>
+                <h2>
+                    Distance from the Earths Surface (KM): 
+                    <input id="distance3" type="text" name="distance" maxlength="30"/>
+                </h2>    
+            </div>
+            <div class="answerColumn"> <!-- Answer-->
+                <input class="calcButton" type="button" onClick="velBodyMass(document.getElementById('velocity3').value, document.getElementById('distance3').value)" value="Calculate">
+                <br> <br> 
+                <div id="velMassAnswer">
+                    <!-- Answer box-->
+                </div>
+            </div>
+        </div>
+
+
+    </body>
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<!--
+11/28/21
+Thomas Chin
+This is the Acceleration page. The user can solve for each factor
+in the centripetal acceleration formula
+-->
+<html>
+    <head>
+        <title>Acceleration Page</title>
+        <link rel="stylesheet" type="text/css" href="Layout.css"/>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="OrbitalJS.js"></script>
+    </head>
+    <body>
+        <ul> <!-- Menu Bar-->
+            <li><a href="HomePage.html"> Home</a></li>
+            <li><a href="OrbitalFactorSelector.html">Orbital Factor Selector</a></li>
+            <li><a href="VelocityPage.html">Velocity Factors</a></li>
+            <li><a href="AccelerationPage.html">Acceleration Factors</a></li>
+            <li><a href="ForcePage.html">Force Factors</a></li>
+            <li><a href="HelpPage.html">Help</a></li>
+        </ul>
+        <div> <!-- Title Div-->
+            <h1>
+                Solving for the Factors of Acceleration
+            </h1>
+            <br>
+            <img class="AccelerationImage" src="Images/Acceleration.png" alt="accel" title="accel">
+            <h2> Gravitational Constant (G) = 6.67 x 10<sup>-11</sup> </h2> <!-- Info on variables-->
+            <h2> Earths Radius = 6.37 x 10<sup>6</sup> meters </h2>
+            <h2> a = centripetal acceleration (m/s<sup>2</sup>)</h2>
+            <h2> r = Distance from the earths core (meters)</h2>
+            <h2> M = The Central Body Mass that an object is orbiting around(Kg) </h2>
+        </div>
+        <br>
+        <hr>
+        <div id="accelerationRow"> <!-- Row 1 - Acceleration-->
+            <div class="titleColumn"> <!-- Acceleration title-->
+                <h1> Acceleration (a)</h1>
+            </div>
+            <div class="inputColumn"><!-- Inputs-->
+                <h2>
+                    Distance from the Earths Surface (KM): 
+                    <input id="accelDistance1" type="text" name="Distance" maxlength="30"/>
+                </h2>
+                <h2>
+                    Mass (Kg): 
+                    <input id="accelMass1" type="text" name="mass" maxlength="30"/>
+                </h2>    
+            </div>
+            <div class="answerColumn"> <!-- Answer-->
+                <input class="calcButton" type="button" onClick="accelAcceleration(document.getElementById('accelDistance1').value, document.getElementById('accelMass1').value)" value="Calculate">
+                <br> <br> 
+                <div id="accelAccelerationAnswer">
+                    <!-- Answer box-->
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div id="accelDistanceRow"> <!-- Row 2 - distance-->
+            <div class="titleColumn"> <!-- distance title-->
+                <h1>Distance (r)</h1>
+            </div>
+            <div class="inputColumn"><!-- Inputs-->
+                <h2>
+                    Acceleration (m/s<sup>2</sup>): 
+                    <input id="accelAcceleration2" type="text" name="acceleration" maxlength="30"/>
+                </h2>
+                <h2>
+                    Mass (Kg):
+                    <input id="accelMass2" type="text" name="mass" maxlength="30"/>
+                </h2>    
+            </div>
+            <div class="answerColumn"> <!-- Answer-->
+                <input class="calcButton" type="button" onClick="accelDistance(document.getElementById('accelAcceleration2').value, document.getElementById('accelMass2').value)" value="Calculate">
+                <br> <br> 
+                <div id="accelDistanceAnswer">
+                    <!-- Answer box-->
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div id="accelMassRow"> <!-- Row 3 - mass-->
+            <div class="titleColumn"> <!-- mass title-->
+                <h1>Body Mass (M)</h1>
+            </div>
+            <div class="inputColumn"><!-- Inputs-->
+                <h2>
+                    Acceleration (m/s<sup>2</sup>): 
+                    <input id="accelAcceleration3" type="text" name="acceleration" maxlength="30"/>
+                </h2>
+                <h2>
+                    Distance from the Earths Surface (KM): 
+                    <input id="accelDistance3" type="text" name="distance" maxlength="30"/>
+                </h2>    
+            </div>
+            <div class="answerColumn"> <!-- Answer-->
+                <input class="calcButton" type="button" onClick="accelBodyMass(document.getElementById('accelAcceleration3').value, document.getElementById('accelDistance3').value)" value="Calculate">
+                <br> <br> 
+                <div id="accelMassAnswer">
+                    <!-- Answer box-->
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

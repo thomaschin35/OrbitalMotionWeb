@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<!--
+11/29/21
+Thomas Chin 
+This is the Force Factors page where user can
+solve for each variable in the centripetal force equation
+-->
+<html>
+    <head>
+        <title>Force Page</title>
+        <link rel="stylesheet" type="text/css" href="Layout.css"/>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="OrbitalJS.js"></script>
+    </head>
+    <body>
+        <ul> <!-- Menu Bar-->
+            <li><a href="HomePage.html"> Home</a></li>
+            <li><a href="OrbitalFactorSelector.html">Orbital Factor Selector</a></li>
+            <li><a href="VelocityPage.html">Velocity Factors</a></li>
+            <li><a href="AccelerationPage.html">Acceleration Factors</a></li>
+            <li><a href="ForcePage.html">Force Factors</a></li>
+            <li><a href="HelpPage.html">Help</a></li>
+        </ul>
+        <div> <!-- Title Div-->
+            <h1>
+                Solving for the Factors of Force
+            </h1>
+            <br>
+            <img class="ForceImage" src="Images/Force.png" alt="force" title="force">
+            <h2> Earths Radius = 6.37 x 10<sup>6</sup> meters </h2> <!-- Info on variables-->
+            <h2> F = Centripetal Force (Newtons)</h2>
+            <h2> v = Velocity (m/s)</h2>
+            <h2> r = Distance from the earths core (meters)</h2>
+            <h2> m = The Central Body Mass that an object is orbiting around(Kg) </h2>
+        </div>
+        <br>
+        <hr>
+        <div id="forceRow"> <!-- Row 1 - Force-->
+            <div class="titleColumn"> <!-- Force title-->
+                <h1> Force (F)</h1>
+            </div>
+            <div class="inputColumn"><!-- Inputs-->
+                <h2>
+                    Distance from the Earth's Surface (Km): 
+                    <input id="forDistance1" type="text" name="Distance" maxlength="30"/>
+                </h2>
+                <h2>
+                    Velocity (m/s): 
+                    <input id="forVelocity1" type="text" name="Velocity" maxlength="30"/>
+                </h2>
+                <h2>
+                    Mass (Kg): 
+                    <input id="forMass1" type="text" name="mass" maxlength="30"/>
+                </h2>    
+            </div>
+            <div class="answerColumn"> <!-- Answer-->
+                <input class="calcButton" type="button" onClick="forForce(document.getElementById('forDistance1').value, document.getElementById('forVelocity1').value, document.getElementById('forMass1').value)" value="Calculate">
+                <br> <br> 
+                <div id="forForceAnswer">
+                    <!-- Answer box-->
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div id="forDistanceRow"> <!-- Row 2 - distance-->
+            <div class="titleColumn"> <!-- distance title-->
+                <h1> Distance (r)</h1>
+            </div>
+            <div class="inputColumn"><!-- Inputs-->
+                <h2>
+                    Centripetal Force (N): 
+                    <input id="forForce2" type="text" name="Force" maxlength="30"/>
+                </h2>
+                <h2>
+                    Velocity (m/s): 
+                    <input id="forVelocity2" type="text" name="Velocity" maxlength="30"/>
+                </h2>
+                <h2>
+                    Mass (Kg): 
+                    <input id="forMass2" type="text" name="mass" maxlength="30"/>
+                </h2>    
+            </div>
+            <div class="answerColumn"> <!-- Answer-->
+                <input class="calcButton" type="button" onClick="forDistance(document.getElementById('forForce2').value, document.getElementById('forVelocity2').value, document.getElementById('forMass2').value)" value="Calculate">
+                <br> <br> 
+                <div id="forDistanceAnswer">
+                    <!-- Answer box-->
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div id="forVelocityRow"> <!-- Row 3 - velocity-->
+            <div class="titleColumn"> <!-- velocity title-->
+                <h1> Velocity (v)</h1>
+            </div>
+            <div class="inputColumn"><!-- Inputs-->
+                <h2>
+                    Centripetal Force (N): 
+                    <input id="forForce3" type="text" name="Force" maxlength="30"/>
+                </h2>
+                <h2>
+                    Distance from the Earth's Surface (m): 
+                    <input id="forDistance3" type="text" name="Distance" maxlength="30"/>
+                </h2>
+                <h2>
+                    Mass (Kg): 
+                    <input id="forMass3" type="text" name="mass" maxlength="30"/>
+                </h2>    
+            </div>
+            <div class="answerColumn"> <!-- Answer-->
+                <input class="calcButton" type="button" onClick="forVelocity(document.getElementById('forForce3').value, document.getElementById('forDistance3').value, document.getElementById('forMass3').value)" value="Calculate">
+                <br> <br> 
+                <div id="forVelocityAnswer">
+                    <!-- Answer box-->
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div id="forMassRow"> <!-- Row 4 - mass-->
+            <div class="titleColumn"> <!-- mass title-->
+                <h1> Mass (m)</h1>
+            </div>
+            <div class="inputColumn"><!-- Inputs-->
+                <h2>
+                    Centripetal Force (N): 
+                    <input id="forForce4" type="text" name="Force" maxlength="30"/>
+                </h2>
+                <h2>
+                    Distance from the Earth's Surface (m): 
+                    <input id="forDistance4" type="text" name="Distance" maxlength="30"/>
+                </h2>
+                <h2>
+                    Velocity (v): 
+                    <input id="forVelocity4" type="text" name="Velocity" maxlength="30"/>
+                </h2>    
+            </div>
+            <div class="answerColumn"> <!-- Answer-->
+                <input class="calcButton" type="button" onClick="forMass(document.getElementById('forForce4').value, document.getElementById('forDistance4').value, document.getElementById('forVelocity4').value)" value="Calculate">
+                <br> <br> 
+                <div id="forMassAnswer">
+                    <!-- Answer box-->
+                </div>
+            </div>
+        </div>
+        <hr>
+    </body>
+</html>
